@@ -1,7 +1,7 @@
 <script setup>
 import './css/best.css'
 import { useRouter } from 'vue-router'
-import {bestMap} from './js/bestDataMap.js'
+import { bestMap } from './js/bestDataMap.js'
 import { ref, computed, nextTick, watch } from 'vue'
 
 const showPopup = ref(false)
@@ -128,40 +128,26 @@ function goBackOrHome() {
       <div class="b-box">
         <ul>
           <li v-for="key in Object.keys(bestMap)" :key="key">
-<<<<<<< HEAD
-            <a href="#" class="btn" @click.prevent="openPopup(key)">
-              {{ key }}
-            </a>
-=======
             <a href="#" class="btn" @click.prevent="openPopup(key)"></a>
->>>>>>> 70f3cb0 (수정작업)
           </li>
         </ul>
         <div class="p-wrap" v-if="showPopup" @click.self="closePopup">
           <div class="p-inner" ref="popupRef">
             <div class="p-main">
               <button class="close" @click="closePopup">×</button>
-              <div class="p-content"
-                ref="scrollRef"
-                @mousedown="onScrollDragStart"
-                @mousemove="onScrollDragMove"
-                @mouseup="onScrollDragEnd"
-                @mouseleave="onScrollDragEnd"
-                @touchstart="onScrollDragStart"
-                @touchmove="onScrollDragMove"
-                @touchend="onScrollDragEnd">
+              <div class="p-content" ref="scrollRef" @mousedown="onScrollDragStart" @mousemove="onScrollDragMove"
+                @mouseup="onScrollDragEnd" @mouseleave="onScrollDragEnd" @touchstart="onScrollDragStart"
+                @touchmove="onScrollDragMove" @touchend="onScrollDragEnd">
                 <div class="p-top">
                   <h3>{{ currentItem.main.brand }}</h3>
                   <p>{{ currentItem.main.name }}</p>
                   <p>{{ currentItem.main.price }}</p>
                   <!-- 큰 이미지 -->
                   <div class="main-img">
-                    <img img :src="activeImage" :alt="activeColorName"/>
+                    <img img :src="activeImage" :alt="activeColorName" />
                   </div>
                   <div class="p-dot">
-                    <span v-for="color in currentItem.main.colors"
-                      :key="color.id"
-                      class="color-dot"
+                    <span v-for="color in currentItem.main.colors" :key="color.id" class="color-dot"
                       :style="{ backgroundColor: color.colorCode }"
                       @click="activeImage = color.image; activeColorName = color.name">
                     </span>
@@ -174,31 +160,19 @@ function goBackOrHome() {
                   </div>
                   <!-- 썸네일 목록 -->
                   <div class="c-thumbs">
-                    <div
-                      v-for="color in currentItem.main.colors"
-                      :key="color.id"
-                      class="thumb-block"
-                    >
-                      <img
-                        :src="color.image"
-                        :alt="color.name"
-                        class="thumb"
-                        @click="activeImage = color.image; activeColorName = color.name"
-                      />
+                    <div v-for="color in currentItem.main.colors" :key="color.id" class="thumb-block">
+                      <img :src="color.image" :alt="color.name" class="thumb"
+                        @click="activeImage = color.image; activeColorName = color.name" />
                     </div>
                   </div>
                 </div>
                 <!-- 관련 상품 텍스트 정보 -->
                 <div class="p-bottom">
                   <div class="r-items">
-                    <div
-                      v-for="rel in currentItem.related"
-                      :key="rel.id"
-                      class="r-info"
-                    >
-                    <div class="r-box">
-                      <img :src="rel.image" :alt="rel.name">
-                    </div>
+                    <div v-for="rel in currentItem.related" :key="rel.id" class="r-info">
+                      <div class="r-box">
+                        <img :src="rel.image" :alt="rel.name">
+                      </div>
                       <p>{{ rel.brand }}</p>
                       <p>{{ rel.name }}</p>
                       <p>{{ rel.price }}</p>
