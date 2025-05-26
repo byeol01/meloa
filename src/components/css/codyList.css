@@ -8,9 +8,7 @@
   display: flex;
 }
 
-#codylist .cody-left {
-
-}
+#codylist .cody-left {}
 
 #codylist .cody-list {
   display: flex;
@@ -20,26 +18,37 @@
   margin-right: 20px;
   position: relative;
   width: 342px;
-  height: 539px;
+  height: 540px;
 }
 
-#codylist .s-image {
+#codylist .c-img-box {
   width: 100%;
   height: 100%;
+  overflow: hidden;
   background-position: center;
   background-size: cover;
   background-repeat: no-repeat;
   border-radius: 12px;
 }
 
+
+#codylist .c-image {
+  height: 100%;
+}
+
 #codylist .cody-desc {
   position: absolute;
   bottom: 40px;
   left: 40px;
-  white-space: pre-line; /* \n 줄바꿈 적용 */
-  font-size: 20px;
+  white-space: pre-line;
+  /* \n 줄바꿈 적용 */
+
+  font-size: 22px;
   line-height: 1.6;
   color: white;
+  filter: drop-shadow(0 0 2px rgba(0, 0, 0, 0.5));
+  font-weight: bold;
+
 }
 
 #codylist .cody-right {
@@ -71,7 +80,7 @@
   width: 342px;
   height: 84px;
   background-color: white;
-  border: 1px solid #B3C3D4;
+  border: 1px solid var(--primary);
   border-radius: 60px;
   display: flex;
   justify-content: center;
@@ -82,16 +91,16 @@
   gap: 5px;
 }
 
-#codylist .a-list h4{
+#codylist .a-list h4 {
   font-size: 18px;
   font-weight: bold;
 }
 
-#codylist .a-list p{
+#codylist .a-list p {
   font-size: 14px;
 }
 
-.back{
+.back {
   position: fixed;
   left: 120px;
   bottom: 50px;
@@ -107,7 +116,7 @@
   align-items: center;
 }
 
-.back::before{
+.back::before {
   content: "";
   background-image: url(/img/back.png);
   width: 10px;
@@ -120,9 +129,18 @@
 }
 
 /* 날씨별 색상 */
+.theme.sunny {
+  --primary: #EBD5A4;
+}
 
+.theme.cloudy {
+  --primary: #B3C3D4;
+}
 
-.theme.sunny   { --primary: #93D8FF; }
-.theme.cloudy  { --primary: #B3C3D4; }
-.theme.rainy   { --primary: #B3C3D4; }
-.theme.snowy   { --primary: #93D8FF; }
+.theme.rainy {
+  --primary: #B3C3D4;
+}
+
+.theme.snowy {
+  --primary: #93D8FF;
+}

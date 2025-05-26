@@ -45,20 +45,22 @@ function scrollToSection() {
       <div class="title-img">
       </div>
       <div class="scroll-button" @click="scrollToSection">
-          <span>scroll</span>
-          <span>▼</span>
-        </div>
+        <span>scroll</span>
+        <span>▼</span>
+      </div>
     </div>
   </div>
 
-    <div class="title-text">
-      <h2>날씨에 맞는 당신의 스타일<br>지금 확인해보세요</h2>
-      <p>오늘 날씨를 선택하고<br>스타일을 추천 받아보세요</p>
-    </div>
+  <div class="title-text">
+    <h2>날씨에 맞는 당신의 스타일<br>지금 확인해보세요</h2>
+    <p>오늘 날씨를 선택하고<br>스타일을 추천 받아보세요</p>
+  </div>
 
 
 
   <div class="weather">
     <Weather />
   </div>
+
+  <BottomButton />
 </template>

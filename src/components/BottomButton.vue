@@ -5,26 +5,30 @@ import './css/bottomButton.css'
 <template>
   <aside id="aside">
     <div class="aside-box">
-      <router-link to="/sunny">
-        <button>
-          <i class="a-icon">맑음</i>
-        </button>
-      </router-link>
-      <router-link to="/cloudy">
       <button>
-        <i class="a-icon">흐림</i>
+        <router-link to="/sunny">
+          <i class="a-icon">맑음</i>
+        </router-link>
       </button>
-      </router-link>
-      <router-link to="/rainy">
-        <button>
+
+      <button>
+        <router-link to="/cloudy">
+          <i class="a-icon">흐림</i>
+        </router-link>
+      </button>
+
+      <button>
+        <router-link to="/rainy">
           <i class="a-icon">비</i>
-        </button>
-      </router-link>
-      <router-link to="/snowy">
-        <button>
+        </router-link>
+      </button>
+
+
+      <button>
+        <router-link to="/snowy">
           <i class="a-icon">눈</i>
-        </button>
-      </router-link>
+        </router-link>
+      </button>
     </div>
   </aside>
 </template>

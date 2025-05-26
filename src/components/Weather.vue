@@ -8,40 +8,40 @@ const router = useRouter();
 const tiles = [
   {
     type: 'sunny',
-    image: '/img/sunny-weather.png',
+    image: '/img/bg_sunny-1.png',
     title: '맑음',
     description: ['맑은 날, 산뜻함을 더해줄', '추천템 확인하기'],
     clickable: true
   },
   {
     type: 'cloudy',
-    image: '/img/cloudy-weather.png',
+    image: '/img/bg_cloudy.png',
     title: '흐림',
     description: ['흐린 날, 기분 전환해줄', '추천템 확인하기'],
     clickable: true
   },
   {
     type: 'rainy',
-    image: '/img/rainy-weather.png',
+    image: '/img/bg_rainy.png',
     title: '비',
     description: ['습기와 꿉꿉함을 날려줄', '추천템 확인하기'],
     clickable: true
   },
   {
     type: 'snowy',
-    image: '/img/snowy-weather.png',
+    image: '/img/bg_snowy.png',
     title: '눈',
     description: ['새하얀 눈과 어울리는', '추천템 확인하기'],
     clickable: true
   },
   {
     type: 'empty',
-    image: '/img/empty-weather.png',
+    image: '/img/bg_sunny-2.png',
     clickable: true
   },
   {
     type: 'event',
-    image: '/img/event-weather.png',
+    image: '/img/bg_event.png',
     title: '이벤트',
     description: ['(무드앤)의 이벤트 소식', '확인하러 가기'],
     clickable: true
@@ -76,16 +76,11 @@ const calendarMarks = ref([
       <div class="w-grid">
         <div class="tile-text">
           <h2>오늘의 날씨를<br>
-          골라보세요!</h2>
+            골라보세요!</h2>
           <p>날씨에 맞는 옷과 활동을<br>
-          추천해드려요</p>
+            추천해드려요</p>
         </div>
-        <div
-          v-for="tile in tiles"
-          :key="tile.type"
-          class="tile"
-          @click="goToWeather(tile.type)"
-        >
+        <div v-for="tile in tiles" :key="tile.type" class="tile" @click="goToWeather(tile.type)">
           <div class="tile-box">
             <img :src="tile.image" :alt="tile.title" class="tile-img" />
           </div>
@@ -96,12 +91,7 @@ const calendarMarks = ref([
           </div>
         </div>
         <div class="calendar-box">
-        <Calendar
-    mode="month"
-    is-expanded
-    :attributes="calendarMarks"
-    style="width: 342px; height: 342px;"
-      />
+          <Calendar mode="month" is-expanded :attributes="calendarMarks" style="width: 342px; height: 342px;" />
         </div>
       </div>
     </div>

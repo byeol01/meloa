@@ -40,9 +40,21 @@
   gap: 50px;
 }
 
+<<<<<<< HEAD
 #item .i-thumb {
   width: 220px;
   height: 207px;
+=======
+#item .i-thumb-box {
+  width: 220px;
+  height: 207px;
+  overflow: hidden;
+  border-radius: 12px;
+}
+
+#item .i-thumb {
+  width: 100%;
+>>>>>>> 70f3cb0 (수정작업)
 }
 
 #item .i-info {
@@ -70,11 +82,33 @@
 
 #item .i-info p:nth-child(4) {}
 
+<<<<<<< HEAD
 #item .i-info div {
   align-self: end;
 }
 
 #item .i-info .buy {}
+=======
+#item .i-info div {}
+
+#item .i-dot {
+  display: flex;
+  align-items: center;
+  gap: 7px;
+  cursor: pointer;
+}
+
+#item .color-dot {
+  display: block;
+  width: 11px;
+  height: 11px;
+  border-radius: 50%;
+}
+
+#item .i-dot p {
+  font-size: 14px !important;
+}
+>>>>>>> 70f3cb0 (수정작업)
 
 #item button {
   border: none;
@@ -87,6 +121,10 @@
   justify-content: center;
   align-items: center;
   margin-right: 10px;
+<<<<<<< HEAD
+=======
+  cursor: pointer;
+>>>>>>> 70f3cb0 (수정작업)
 }
 
 #item button:nth-child(4) {}

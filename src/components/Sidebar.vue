@@ -1,7 +1,7 @@
 <script setup>
 import './css/sidebar.css'
 import { ref, computed, watch } from 'vue'
-import { useRoute, useRouter } from 'vue-router'
+import { RouterLink, useRoute, useRouter } from 'vue-router'
 
 const route = useRoute()
 const router = useRouter()
@@ -36,20 +36,13 @@ function isActive(icon) {
     <div class="flex">
       <router-link to="/">
         <!-- 이벤트일 때 로고 이미지 변경 -->
-        <img
-          :src="isEventPage ? '/img/event-logo.png' : '/img/wlogo.png'"
-          alt="로고"
-          class="logo"
-        />
+        <img :src="isEventPage ? '/img/event-logo.png' : '/img/wlogo.png'" alt="로고" class="logo" />
       </router-link>
       <ul class="side-icon">
         <li v-for="icon in icons" :key="icon.type" @click="currentPath = icon.path">
           <router-link :to="icon.path" :aria-label="icon.label">
-            <i
-              class="s-icon"
-              :class="[icon.iconClass, isActive(icon) ? 'active' : '', isEventPage ? 'event-icon' : '']"
-              aria-hidden="true"
-            ></i>
+            <i class="s-icon" :class="[icon.iconClass, isActive(icon) ? 'active' : '', isEventPage ? 'event-icon' : '']"
+              aria-hidden="true"></i>
           </router-link>
         </li>
       </ul>

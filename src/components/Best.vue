@@ -128,9 +128,13 @@ function goBackOrHome() {
       <div class="b-box">
         <ul>
           <li v-for="key in Object.keys(bestMap)" :key="key">
+<<<<<<< HEAD
             <a href="#" class="btn" @click.prevent="openPopup(key)">
               {{ key }}
             </a>
+=======
+            <a href="#" class="btn" @click.prevent="openPopup(key)"></a>
+>>>>>>> 70f3cb0 (수정작업)
           </li>
         </ul>
         <div class="p-wrap" v-if="showPopup" @click.self="closePopup">
