@@ -1,0 +1,143 @@
+#item {
+  position: relative;
+  height: 100vh;
+  padding-top: 200px;
+}
+
+#item .wrap {
+  margin-left: calc((100vw - 1440px - 17px) / 2);
+
+}
+
+#item .i-layout {
+  display: flex;
+  gap: 140px;
+}
+
+#item .i-main {}
+
+#item .i-image {
+  width: 342px;
+  height: 540px;
+  border-radius: 12px;
+}
+
+#item .i-box {
+  width: 1270px;
+  height: 540px;
+  overflow: hidden;
+  border-radius: 12px 0 0 12px;
+  background-color: #D1DEE9;
+  position: absolute;
+  right: 0;
+}
+
+#item .i-card {
+  display: flex;
+  width: 570px;
+  height: 207px;
+  align-items: center;
+  gap: 50px;
+}
+
+#item .i-thumb-box {
+  width: 220px;
+  height: 207px;
+  overflow: hidden;
+  border-radius: 12px;
+}
+
+#item .i-thumb {
+  width: 100%;
+
+}
+
+#item .i-info {
+  height: 100%;
+  padding: 30px 0;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+}
+
+#item span:nth-child(1) {}
+
+#item span:nth-child(2) {}
+
+#item .i-info strong {
+  font-size: 24px;
+  font-weight: bold;
+}
+
+#item .i-info p {}
+
+#item .i-info p:nth-child(2) {
+  font-size: 24px;
+}
+
+#item .i-info p:nth-child(4) {}
+
+#item .i-info div {}
+
+#item .i-dot {
+  display: flex;
+  align-items: center;
+  gap: 7px;
+  cursor: pointer;
+}
+
+#item .color-dot {
+  display: block;
+  width: 11px;
+  height: 11px;
+  border-radius: 50%;
+}
+
+#item .i-dot p {
+  font-size: 14px !important;
+}
+
+#item button {
+  border: none;
+  background-color: #333;
+  color: white;
+  width: 67px;
+  height: 25px;
+  border-radius: 13px;
+  display: inline-flex;
+  justify-content: center;
+  align-items: center;
+  margin-right: 10px;
+  cursor: pointer;
+}
+
+#item button:nth-child(4) {}
+
+#item button:nth-child(5) {}
+
+/* 슬라이드 */
+.splide {
+  height: 100%;
+}
+
+.splide__track {
+  height: 100%;
+}
+
+.splide__slide {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  min-height: auto;
+}
+
+.splide__slide {
+  margin: 0 !important;
+}
+
+.vertical-group {
+  display: flex;
+  flex-direction: column;
+  gap: 24px;
+  align-items: center;
+}

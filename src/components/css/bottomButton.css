@@ -1,0 +1,64 @@
+#aside {
+  position: fixed;
+  right: 50px;
+  bottom: 50px;
+  width: fit-content;
+  z-index: 400;
+}
+
+#aside .aside-box {}
+
+#aside .aside-box a {}
+
+#aside .aside-box button {
+
+  width: 61px;
+  height: 35px;
+  border: 0;
+  background-color: white;
+  border-radius: 18px;
+  margin-left: 10px;
+  filter: drop-shadow(0 2px 3px rgba(0, 0, 0, 0.1));
+  cursor: pointer;
+  font-size: 0;
+  transition: 0.3s;
+}
+
+#aside .aside-box button:hover {
+  background-color: #FFF9CE;
+}
+
+#aside .a-icon {
+  width: 100%;
+  height: 100%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+#aside .aside-box i::before {
+  content: "";
+  display: block;
+  width: 100%;
+  height: 80%;
+  background-size: contain;
+  background-repeat: no-repeat;
+  background-position: center;
+}
+
+#aside .aside-box button:nth-child(1) i::before {
+  background-image: url(/img/sunny-btn.png);
+}
+
+#aside .aside-box button:nth-child(2) i::before {
+  background-image: url(/img/cloudy-btn.png);
+  height: 65%;
+}
+
+#aside .aside-box button:nth-child(3) i::before {
+  background-image: url(/img/rainy-btn.png);
+}
+
+#aside .aside-box button:nth-child(4) i::before {
+  background-image: url(/img/snowy-btn.png);
+}

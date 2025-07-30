@@ -1,0 +1,136 @@
+#detail {
+  position: relative;
+  overflow: hidden;
+  height: 100vh;
+}
+
+#detail .d-wrap {
+  height: 100%;
+  overflow: visible;
+  padding-left: calc((100% - 1440px - 17px) /2);
+  width: 100%;
+  box-sizing: border-box;
+}
+
+#detail .d-left {
+  display: grid;
+  grid-template-columns: auto auto;
+  grid-template-rows: auto auto;
+  width: 100%;
+  row-gap: 50px;
+  height: auto;
+  margin-top: 50px;
+}
+
+.pin-spacer {
+  width: 100% !important;
+}
+
+.pin-wrap {
+  height: 100vh;
+  width: 1680px !important;
+  position: relative;
+  max-width: 1680px !important;
+  display: grid;
+  grid-template-columns: 1fr 640px;
+}
+
+.inner-scroll {
+  will-change: transform;
+}
+
+#detail .group-card {}
+
+#detail .s-img-box {
+  margin-bottom: 10px;
+  border-radius: 12px;
+  width: 345px;
+  height: 432px;
+  overflow: hidden;
+  position: relative;
+}
+
+#detail .s-image {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  /* 비율 유지하면서 꽉 채움 */
+  display: block;
+}
+
+#detail .d-card {}
+
+#detail .d-lists {
+  padding-left: 0;
+}
+
+#detail .d-list {
+  display: flex;
+  gap: 20px;
+  padding: 10px 0;
+}
+
+#detail .d-thumb-box {
+  width: 85px;
+  height: 85px;
+  overflow: hidden;
+  border-radius: 8px;
+}
+
+#detail .d-thumb {
+  width: 100%;
+  cursor: pointer;
+}
+
+#detail .d-text {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+}
+
+#detail .d-text strong {
+  font-size: 16px;
+  cursor: pointer;
+}
+
+#detail .d-text p {
+  font-size: 20px;
+}
+
+#detail .d-text span {
+  display: flex;
+  align-items: center;
+  gap: 7px;
+  cursor: pointer;
+}
+
+#detail .d-text>div {
+  display: flex;
+  align-items: center;
+  gap: 7px;
+  cursor: pointer;
+}
+
+#detail .d-text .color-dot {
+  display: block;
+  width: 11px;
+  height: 11px;
+  border-radius: 50%;
+}
+
+#detail .d-text div p {
+  font-size: 14px;
+}
+
+#detail .side {
+  display: block;
+  width: 640px;
+  height: 100%;
+  position: sticky;
+  top: 0;
+  background-color: aqua;
+  background-image: url(/img/rainy5.png);
+  background-repeat: no-repeat;
+  background-size: 100%;
+  justify-self: end;
+}

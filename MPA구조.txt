@@ -1,0 +1,8 @@
+/main
+/rainy
+/cloudy
+/sunny
+/snowy
+/cody
+/item(id)
+/event

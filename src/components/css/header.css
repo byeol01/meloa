@@ -1,0 +1,40 @@
+#header {
+  position: fixed;
+  width: 100%;
+  top: 0;
+  z-index: 800;
+}
+
+#header .wrap {
+  justify-content: end;
+  align-items: center;
+}
+
+#header .router-link-active {}
+
+#header .router-link-active img {}
+
+#header .nav-right {
+  display: flex;
+  gap: 40px;
+  height: 70px;
+  justify-content: stretch;
+  align-items: center;
+}
+
+#header .nav-right img {
+  width: 20px;
+  height: 20px;
+  cursor: pointer;
+}
+
+#header .nav-right img:nth-child(1) {}
+
+#header .nav-right img:nth-child(2) {}
+
+
+#header .nav-right img:nth-child(3) {}
+
+.event-header {
+  background-color: #F15723;
+}

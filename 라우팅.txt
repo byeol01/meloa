@@ -1,0 +1,36 @@
+라우팅 경로
+/                                ← 메인
+├── /event                       ← 이벤트 전용 페이지
+├── /[weatherType]               ← 날씨별 콘텐츠 (코디/활동 목록)
+│     └── /cody                  ← 코디 3가지+아이템
+│          └── /item/:itemId     ← 코디1가지+아이템
+
+파일 경로
+src/
+├── App.vue                   ← 페이지 단위 컴포넌트
+├── components/
+│   ├── Home.vue              ← 홈
+│   ├── Weather.vue           ← 홈 하단 날씨+달력
+│   ├── Calendar.vue          ← 달력 내부 수정
+│   ├── CodyList.vue          ← 코디3가지+활동
+│   ├── CodyDetail.vue        ← 코디3가지+아이템
+│   ├── ItemList.vue          ← 코디1가지+아이템
+│   ├── Event.vue             ← 이벤트페이지
+│   ├── HeaderNav.vue            ← 헤더
+│   ├── BottomButton.vue      ← 하단 버튼
+│   ├── css/
+│   │    ├── main.css
+│   │    ├── weather.css
+│   │    ├── codyList.css
+│   │    ├── codyDetail.css
+│   │    ├── itemList.css
+│   │    ├── event.css
+│   │    └── common.css
+│   └── js/
+│        └── weatherDataMap.js  ← 코디,아이템 데이터
+│
+├── public/            ← 이미지 저장
+│   └── img/
+│        └── svg/
+├── router/
+│   └── index.js
